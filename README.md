@@ -4,7 +4,7 @@ Landing page for the AI guide PDF.
 
 ## Live URL
 
-**https://keeping-up-with-2hdbnifgk-william-suttons-projects-5b0c7e6a.vercel.app**
+**https://keeping-up-with-ai.vercel.app**
 
 ## Overview
 
