@@ -1,186 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keeping Up With AI - Understand the Technology Shaping Our Future</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 100%);
-            color: #e0e0e0;
-            line-height: 1.6;
-            min-height: 100vh;
-        }
-        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-        
-        h1 { 
-            font-size: 3.5rem; 
-            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-        
-        .tagline {
-            text-align: center;
-            font-size: 1.4rem;
-            color: #888;
-            margin-bottom: 60px;
-        }
-        
-        .hero {
-            text-align: center;
-            padding: 60px 0;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            color: #aaa;
-            max-width: 600px;
-            margin: 0 auto 30px;
-        }
-        
-        .price {
-            font-size: 2.5rem;
-            color: #10b981;
-            font-weight: bold;
-            margin: 30px 0;
-        }
-        
-        .cta {
-            display: inline-block;
-            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-            color: white;
-            padding: 18px 50px;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-decoration: none;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
-        }
-        
-        .cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 30px rgba(59, 130, 246, 0.6);
-        }
-        
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin: 60px 0;
-        }
-        
-        .feature {
-            background: rgba(255,255,255,0.05);
-            padding: 30px;
-            border-radius: 15px;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        .feature h3 {
-            color: #3b82f6;
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-        }
-        
-        .feature p {
-            color: #999;
-        }
-        
-        .preview {
-            background: rgba(255,255,255,0.03);
-            padding: 40px;
-            border-radius: 20px;
-            margin: 50px 0;
-        }
-        
-        .preview h2 {
-            color: #3b82f6;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        
-        .toc-preview {
-            list-style: none;
-        }
-        
-        .toc-preview li {
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            color: #bbb;
-        }
-        
-        .toc-preview li:last-child {
-            border-bottom: none;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 40px;
-            color: #666;
-            font-size: 0.9rem;
-        }
-        
-        .guarantee {
-            text-align: center;
-            color: #666;
-            font-size: 0.9rem;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A public, proposed six-part outline for Keeping Up With AI. Outline only; no guide, purchase or download is provided here.">
+  <title>Keeping Up With AI — Public Outline Preview</title>
+  <style>
+    :root { color-scheme: light; --paper: #f5f2e9; --ink: #202e2b; --muted: #52615b; --green: #245643; --line: #c6cec4; --white: #fffef9; }
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 1.5rem; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 1.0625rem/1.65 system-ui, sans-serif; }
+    a { color: var(--green); text-underline-offset: .22em; text-decoration-thickness: .1em; }
+    a:hover { text-decoration-thickness: .18em; }
+    :focus-visible { outline: 3px solid #8d390d; outline-offset: 5px; }
+    [tabindex="-1"]:focus { outline: 3px solid #8d390d; outline-offset: 5px; }
+    .skip { position: absolute; left: 1rem; top: -8rem; z-index: 1; padding: .75rem 1rem; background: var(--white); }
+    .skip:focus { top: 1rem; }
+    .shell { max-width: 1120px; margin: auto; padding-inline: clamp(1.25rem, 5vw, 4rem); }
+    header .shell { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1.25rem; border-bottom: 1px solid var(--line); }
+    .brand, .eyebrow { font-size: .75rem; font-weight: 750; letter-spacing: .13em; text-transform: uppercase; }
+    nav { display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
+    nav a { display: inline-flex; align-items: center; min-height: 44px; font-size: .9rem; }
+    .hero { padding-block: clamp(3rem, 7vw, 6rem) 3rem; }
+    .eyebrow { color: var(--green); margin: 0 0 1rem; }
+    h1, h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; line-height: 1.08; }
+    h1 { font-size: clamp(3.25rem, 8vw, 6rem); letter-spacing: -.045em; max-width: 800px; margin: 0 0 1.5rem; }
+    .intro { font-size: clamp(1.15rem, 2vw, 1.4rem); max-width: 650px; color: var(--muted); }
+    .button { display: inline-block; min-height: 48px; background: var(--green); color: var(--white); padding: .75rem 1.25rem; border-radius: 3px; font-weight: 650; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; padding-bottom: 4rem; }
+    h2 { font-size: 2.25rem; margin: 0 0 1rem; }
+    .section-note { color: var(--muted); margin: 0 0 1.5rem; max-width: 42ch; }
+    ol { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line); counter-reset: topics; }
+    li { counter-increment: topics; display: grid; grid-template-columns: 2rem minmax(0, 1fr); gap: .75rem; padding: 1.25rem 0; border-bottom: 1px solid var(--line); }
+    li::before { content: counter(topics, decimal-leading-zero); font: .85rem/1.8 ui-monospace, monospace; color: var(--green); }
+    h3 { font-size: 1.1rem; line-height: 1.5; font-weight: 600; margin: 0; }
+    .availability { background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--green); padding: 1.5rem; }
+    .availability h2 { font-size: 1.75rem; }
+    .availability p { margin: 1rem 0 0; }
+    .availability .label { font-size: .75rem; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; color: var(--green); margin: 0 0 1rem; }
+    footer { border-top: 1px solid var(--line); padding-block: 1.75rem 2.5rem; font-size: .875rem; color: var(--muted); }
+    footer p { margin: .4rem 0; }
+    @media (max-width: 700px) { header .shell { align-items: flex-start; flex-direction: column; gap: .5rem; } .layout { grid-template-columns: 1fr; } .hero { padding-top: 2.5rem; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; } }
+    @media print { :root { --paper: white; --ink: black; --muted: #333; --green: black; --line: #888; --white: white; } body { font-size: 11pt; } .skip, nav, .button, .back { display: none; } .shell { max-width: none; padding-inline: 0; } .hero { padding-block: 1.5rem; } h1 { font-size: 36pt; } .layout { display: block; padding-bottom: 1rem; } .availability { margin-top: 1.5rem; break-inside: avoid; } li { padding-block: .5rem; break-inside: avoid; } h2 { font-size: 22pt; } footer { padding-block: 1rem; } }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="hero">
-            <h1>Keeping Up With AI</h1>
-            <p class="tagline">Understand the technology shaping our future</p>
-            
-            <p>AI is moving fast. Every week there's something new. Transformers, LLMs, agents, reasoning models... it gets overwhelming.</p>
-            
-            <p>This guide cuts through the noise. Written by an AI, for anyone who wants to actually understand what's happening — without a PhD.</p>
-            
-            <div class="price">$19</div>
-            
-            <a href="#" class="cta">Get the PDF</a>
-            
-            <p class="guarantee">30-day money-back guarantee</p>
-        </div>
-        
-        <div class="features">
-            <div class="feature">
-                <h3>Clear Explanations</h3>
-                <p>No jargon without explaining it. Complex concepts broken down into plain English.</p>
-            </div>
-            <div class="feature">
-                <h3>Historical Context</h3>
-                <p>Understand where AI came from and why the recent breakthroughs happened when they did.</p>
-            </div>
-            <div class="feature">
-                <h3>Practical Knowledge</h3>
-                <p>Learn what matters for the real world — not academic curiosities.</p>
-            </div>
-        </div>
-        
-        <div class="preview">
-            <h2>What's Inside</h2>
-            <ul class="toc-preview">
-                <li>Chapter 1: The Evolution of AI</li>
-                <li>Chapter 2: How Neural Networks Work</li>
-                <li>Chapter 3: Transformers and Attention</li>
-                <li>Chapter 4: Large Language Models Explained</li>
-                <li>Chapter 5: The Agent Revolution</li>
-                <li>Chapter 6: What's Coming Next</li>
-            </ul>
-        </div>
-        
-        <footer>
-            <p>Written by Aaron AI | Supervised by William Sutton</p>
-        </footer>
+  <a class="skip" href="#main">Skip to content</a>
+  <header id="top">
+    <div class="shell">
+      <span class="brand">Keeping Up With AI</span>
+      <nav aria-label="Page"><a href="#outline">Proposed outline</a><a href="#availability">Availability</a></nav>
     </div>
+  </header>
+  <main id="main" class="shell" tabindex="-1">
+    <section class="hero" aria-labelledby="title">
+      <p class="eyebrow">Public preview / Outline only</p>
+      <h1 id="title">Keeping Up<br>With AI</h1>
+      <p class="intro">Six proposed topics. A starting point for a guide—not a finished guide.</p>
+      <p><a class="button" href="#outline">Explore the proposed outline <span aria-hidden="true">↓</span></a></p>
+    </section>
+    <div class="layout">
+      <section id="outline" aria-labelledby="outline-title" tabindex="-1">
+        <p class="eyebrow">01 — The proposed contents</p>
+        <h2 id="outline-title">A six-part outline</h2>
+        <p class="section-note">These are the six titles from the original public outline. They are proposed chapter titles, not verified finished chapters. No chapter text is included.</p>
+        <ol aria-label="Proposed chapter titles">
+          <li><h3>The Evolution of AI</h3></li>
+          <li><h3>How Neural Networks Work</h3></li>
+          <li><h3>Transformers and Attention</h3></li>
+          <li><h3>Large Language Models Explained</h3></li>
+          <li><h3>The Agent Revolution</h3></li>
+          <li><h3>What's Coming Next</h3></li>
+        </ol>
+      </section>
+      <aside id="availability" class="availability" aria-labelledby="availability-title" tabindex="-1">
+        <p class="label">02 — Availability</p>
+        <h2 id="availability-title">An outline, not an offer.</h2>
+        <p>This page is an outline only. No purchase, download or fulfillment is available here.</p>
+        <p>No guide PDF or chapter excerpts are supplied. No release date is announced on this page.</p>
+        <p>You may print this public outline using your browser. A printed outline is not the guide PDF.</p>
+      </aside>
+    </div>
+  </main>
+  <footer class="shell">
+    <p>Original project attribution: Written by Aaron AI | Supervised by William Sutton</p>
+    <p>This attribution is retained from the original page; it is not verification of authorship or a completed manuscript.</p>
+    <p class="back"><a href="#top">Back to top ↑</a></p>
+  </footer>
 </body>
 </html>
